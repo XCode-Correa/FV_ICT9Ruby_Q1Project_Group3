@@ -30,12 +30,15 @@
         .bg-ob-blue{
             background-color: #275692;
         }
+        .pt-6{
+            padding-top: 65px;
+        }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href=""><img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/8b5611eb-ff3a-407f-9adc-e116a23373fc/OBMC+LOGO+2024-04.png" alt="Logo" class=""></a>
+        <a class="navbar-brand" href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/8b5611eb-ff3a-407f-9adc-e116a23373fc/OBMC+LOGO+2024-04.png" alt="Logo" class=""></a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
@@ -45,19 +48,23 @@
             
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="page2.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="page3.html">About Us</a>
+                    <a class="nav-link" href="page2.html">Courses Offer</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="page4.html">Enroll</a>
+                    <a class="nav-link" href="page3.html">Enroll</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="page5.html">Contact Us</a>
+                    <a class="nav-link" href="page4.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="page5.html">About the Group</a>
                 </li>
             </ul>
             
@@ -70,18 +77,129 @@
     </div>
 </nav>
 
-<br><br>
+<br>
 
-<div class="container pb-2 bg-light bg-opacity-50 text-dark rounded">
-    <p class="fw-bold display-4">About us</p>
+<p class="fw-normal pt-6 display-4 text-center text-ob-blue">OBMC Student Enrollment Form</p>
     <br>
-    <blockquote>
-        <span class="lead">Lorem Ipsum</span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </blockquote>
+    <p class="fw-normal text-center">Fill out the form below to enroll for the upcoming school year.</p>
+<br>
+
+<div class="container p-3 bg-light bg-opacity-50 text-dark rounded">
+        <p class="fw-normal fs-7">Student Information</p>
+
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="firstname">First name</label>
+		        <br>
+		        <input type="text" class="form-control form-control-sm" name="firstname" placeholder="John" required>
+            </div>
+            <div class="col">
+                <label class="form-label" for="lastname">Last name</label>
+		        <br>
+		        <input type="text" class="form-control form-control-sm" name="lastname" placeholder="Doe" required>
+            </div>
+        </div>
+        
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="birth">Birth Date</label>
+		        <br>
+		        <input type="date" class="form-control form-control-sm" name="birth" required>
+            </div>
+            <div class="col">
+                <label class="form-label" for="gender">Gender</label>
+		        <br>
+		        <select class="form-select form-select-sm" name="gender" required>
+			        <option>Select...</option>
+			        <option>Male</option>
+			        <option>Female</option>
+		        </select>
+            </div>
+            <div class="col">
+                <label class="form-label" for="grade">Grade Level</label>
+		        <br>
+                <select class="form-select form-select-sm" name="grade" required>
+		            <option>Select...</option>
+                    <option>Kindergarten/Casa</option>
+                    <option>Grade 1</option>
+                    <option>Grade 2</option>
+                    <option>Grade 3</option>
+                    <option>Grade 4</option>
+                    <option>Grade 5</option>
+                    <option>Grade 6</option>
+                    <option>Grade 7</option>
+			        <option>Grade 8</option>
+			        <option>Grade 9</option>
+			        <option>Grade 10</option>
+			        <option>Grade 11</option>
+			        <option>Grade 12</option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+
+        <p class="fw-normal fs-7">Contact Details</p>
+
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="email">Email Address</label>
+		        <br>
+                <input type="email" name="email" class="form-control form-control-sm" placeholder="example@gmail.com" required>
+            </div>
+        </div>
+        
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="contact">Contact Number</label>
+		        <br>
+                <input type="number" name="contact" class="form-control form-control-sm" placeholder="0912-345-6789" required>
+            </div>
+        </div>
+
+		<br>
+        
+        <p class="fw-normal fs-7">Other Information</p>
+
+        <div class="col">
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="mode">
+                <label class="form-label" for="online">Online</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="mode">
+                <label class="form-label" for="face2face">Face-to-Face</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="mode">
+                <label class="form-label" for="hybrid">Hybrid</label>
+            </div>
+
+            <br>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="confirm" required>
+                <label class="form-label" for="confirm">I confirm that the information provided is true and complete.</label>
+            </div>
+        </div>
+
+		<br><br>
+
+        <center>
+            <button type="submit" id="submit" name="submit" class="btn btn-primary">Submit Enrollment</button>
+        </center>
 </div>
+
+<br>
 
 <div class="container p-1 bg-ob-blue text-light text-center fs-8 rounded">
         © 2025 OB Montessori Website | 9-Ruby Group 3
 </div>
+
+<br>
 </body>
 </html>
